@@ -1,0 +1,23 @@
+<head><script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js">
+</script>
+<script src='js/script.js' type='text/javascript'></script>
+<link rel="stylesheet" href="style.css" type="text/css" media="screen">
+</head>
+
+<body ng-app="myApp">
+  <h1>Challenge One</h1>
+  <div ng-controller="myCtrl">
+    <div>
+
+        <div ng-repeat="month in months | orderBy:'ordinal'"
+            class="month {{month.season}}">
+
+          <h2>{{month.english}}</h2>
+          <h3>French word: {{month.french}}</h3>
+          <h4>Number of Days: {{month.days}}</h4>
+
+        </div>
+    </div>
+  </div>
+
+</body>

@@ -1,0 +1,20 @@
+body {
+  margin-left: 10px;
+
+}
+
+.month{
+  border: 2px solid black;
+  }
+
+.spring{
+  background-color: green;
+  }
+  
+.summer{
+  background-color: orange;
+  }
+  
+ .fall{
+  background-color: brown;
+  }
