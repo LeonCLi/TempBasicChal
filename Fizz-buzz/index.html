@@ -1,0 +1,15 @@
+<head><script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src='js/script.js' type='text/javascript'></script>
+</head>
+<body ng-app="myApp">
+  <h1>Challenge Two: Fizz Buzz</h1>
+  <div ng-controller="myCtrl">
+    <div ng-repeat="num in numbers">
+      <h2 ng-if="num%3==0 && num%5==0">Fizzbuzz {{num}}</h2>
+      <h2 ng-if="num%3==0 && num%5!=0">Fizz {{num}}</h2>
+      <h2 ng-if="num%3!=0 && num%5==0">Buzz {{num}}</h2>
+      <h2 ng-if="num%3!=0 && num%5!=0">{{num}}</h2>
+
+    </div>
+  </div>
+</body>
