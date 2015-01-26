@@ -1,0 +1,35 @@
+<head><script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+<script src='js/script.js' type='text/javascript'></script>
+</head>
+<body ng-app="myApp">
+  <h1>Challenge Three: Countries Data</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Country name </th>
+        <th>code: </th>
+        <th>1960: </th>
+        <th>1970: </th>
+        <th>1980: </th>
+        <th>1990: </th>
+        <th>2000: </th>
+        <th>2010: </th>
+        <th>% growth (1960-2010)</th>
+
+      </tr>
+    </thead>
+    <tbody ng-controller="oneController">
+      <tr ng-repeat="c in countries | orderBy:'name'">
+        <td>{{c.name}}</td>
+        <td>{{c.code}}</td>
+        <td>{{c.1960 | number:0}}</td>
+        <td>{{c.1970 | number:0}}</td>
+        <td>{{c.1980 | number:0}}</td>
+        <td>{{c.1990 | number:0}}</td>
+        <td>{{c.2000 | number:0}}</td>
+        <td>{{c.2010 | number:0}}</td>
+        <td>{{(c.2010 - c.1960)/c.1960*100 | number:0}}%</td>
+      </tr>
+    </tbody>
+  </table>
+</body>
